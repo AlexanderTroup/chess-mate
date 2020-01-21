@@ -1,7 +1,7 @@
-.Square.black{
-  background-color: black;
+.square.dark{
+  background-color: rgb(77, 37, 10);
 }
 
-.Square.white{
-  background-color: white;
+.square.light{
+  background-color: rgb(182, 142, 97);
 }
