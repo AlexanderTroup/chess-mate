@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
 import mate from './images/mates/anastasias-mate.png'
-import Board from './Board'
+import Board from './components/Board/Board'
 
 const App: React.FC = () => {
   return (
     <div>
-      <img src={mate} alt="mating pattern"/>
+      <h1>What kind of mate is this?</h1>
       <Board/>
+      <ul>
+        <li>Anastasia's mate</li>
+        <li>'s mate</li>
+        <li>Anastasia's mate</li>
+      </ul>
+      
     </div>
 
   );

@@ -1,3 +1,8 @@
-use chess.js board layout to display a basic board. (no fen)
+basic question layout:
 
-display different mates with fen notation.
+What kind of mate is this?
+-> Anastasia's Mate
+-> Bosun's Mate
+-> Pilsbury's Mate
+
+Just display. don't worry about correct answer for now. 
