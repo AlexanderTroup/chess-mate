@@ -1,6 +1,6 @@
 import React from 'react'
-import { Piece } from './domain/Piece'
-import { SquareColour } from './domain/Colour'
+import { Piece } from '../domain/Piece'
+import { SquareColour } from '../domain/Colour'
 import './Square.css';
 //import queen from './images/pieces/queen.png'
 interface Props {

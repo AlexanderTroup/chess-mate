@@ -1,9 +1,9 @@
 import React from "react"
-import Square from "../../Square"
+import Square from "../Square"
 import { SquareColour } from "../../domain/Colour"
 import _ from "lodash"
 import "./Board.css"
-import { Piece } from "../../Piece"
+import { Piece } from "../Piece"
 import { BoardState, Rank, File } from "../../domain/BoardState"
 import { AnastasiasMate } from "../../domain/exampleBoardStates"
 

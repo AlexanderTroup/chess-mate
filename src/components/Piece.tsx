@@ -1,19 +1,19 @@
 import React from "react";
-import { Colour } from "./domain/Colour";
-import { PieceType } from "./domain/PieceType";
+import { Colour } from "../domain/Colour";
+import { PieceType } from "../domain/PieceType";
 
-import whitePawn from './images/pieces/White-Pawn.png'
-import whiteKnight from './images/pieces/White-Knight.png'
-import whiteBishop from './images/pieces/White-Bishop.png'
-import whiteRook from './images/pieces/White-Rook.png'
-import whiteQueen from './images/pieces/White-Queen.png'
-import whiteKing from './images/pieces/White-King.png'
-import blackPawn from './images/pieces/Black-Pawn.png'
-import blackKnight from './images/pieces/Black-Knight.png'
-import blackBishop from './images/pieces/Black-Bishop.png'
-import blackRook from './images/pieces/Black-Rook.png'
-import blackQueen from './images/pieces/Black-Queen.png'
-import blackKing from './images/pieces/Black-King.png'
+import whitePawn from '../images/pieces/White-Pawn.png'
+import whiteKnight from '../images/pieces/White-Knight.png'
+import whiteBishop from '../images/pieces/White-Bishop.png'
+import whiteRook from '../images/pieces/White-Rook.png'
+import whiteQueen from '../images/pieces/White-Queen.png'
+import whiteKing from '../images/pieces/White-King.png'
+import blackPawn from '../images/pieces/Black-Pawn.png'
+import blackKnight from '../images/pieces/Black-Knight.png'
+import blackBishop from '../images/pieces/Black-Bishop.png'
+import blackRook from '../images/pieces/Black-Rook.png'
+import blackQueen from '../images/pieces/Black-Queen.png'
+import blackKing from '../images/pieces/Black-King.png'
 
 import './Piece.css'
 

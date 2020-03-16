@@ -1,9 +1,8 @@
 import { BoardState, Rank, File } from "../BoardState"
 import { Colour } from "../Colour"
 import { PieceType } from "../PieceType"
-import { fileURLToPath } from "url"
 
-const StandardBoardState = {}
+export const StandardBoardState = {}
 
 export const PawnOnD5: BoardState = {
   pieces: [
