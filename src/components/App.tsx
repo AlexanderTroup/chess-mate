@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Board from './Board/Board'
 import {connect, ConnectedProps} from 'react-redux'
-import { MarkClickedState } from '../types';
+import { MarkClickedState, MARK_CLICKED } from '../types';
 
 interface RootState {
   markClicked: MarkClickedState
@@ -18,7 +18,11 @@ const mapState = (state: RootState) => {
   }
 }
 
-const connector = connect(mapState)
+const mapDispatch = {
+  toggleClicked: () => ({type: MARK_CLICKED})
+}
+
+const connector = connect(mapState, mapDispatch)
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 
@@ -30,6 +34,7 @@ const App: React.FC<PropsFromRedux> = (props) => {
       Clicked: {props.clicked.toString()}
       <Board/>
       <ul>
+        <button onClick={props.toggleClicked}>Click ME!</button>
         <li>
           <button>Anastasia's mate</button>
         </li>
