@@ -25,4 +25,6 @@ Milestones:
 
 Short-term:
 Add redux to the application
-Decide on a folder structure and move things to where they need to be.
+ - basic not clicked/clicked state when app is loaded!
+  - not clicked
+  - clicked

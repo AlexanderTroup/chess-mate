@@ -1,8 +1,6 @@
-const chessMateState = (state = {}) => {
-  // if (action.type === "testFlag") {
-  //   return "test"
-  // }
-  return state
-}
+import {combineReducers} from 'redux'
+import { markClicked } from './markClicked'
 
-export default chessMateState
+export default combineReducers({
+ markClicked
+})

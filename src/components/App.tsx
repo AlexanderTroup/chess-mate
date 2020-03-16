@@ -1,12 +1,33 @@
 import React from 'react';
 import './App.css';
 import Board from './Board/Board'
+import {connect, ConnectedProps} from 'react-redux'
+import { MarkClickedState } from '../types';
 
-const App: React.FC = () => {
+interface RootState {
+  markClicked: MarkClickedState
+}
+
+const mapState = (state: RootState) => {
+  console.log('==========STATE==========================');
+  console.log(state);
+  console.log('====================================');
+  
+  return {
+    clicked: state.markClicked.clicked
+  }
+}
+
+const connector = connect(mapState)
+
+type PropsFromRedux = ConnectedProps<typeof connector>
+
+const App: React.FC<PropsFromRedux> = (props) => {
   return (
     <div>
       <h1>x/x</h1>
       <h1>What kind of mate is this?</h1>
+      Clicked: {props.clicked.toString()}
       <Board/>
       <ul>
         <li>
@@ -25,4 +46,4 @@ const App: React.FC = () => {
   );
 }
 
-export default App;
+export default connector(App);
