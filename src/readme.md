@@ -24,7 +24,8 @@ Milestones:
     - lean on chess.js as much as possible to validate.
 
 Short-term:
-Add redux to the application
- - basic not clicked/clicked state when app is loaded!
-  - not clicked
-  - clicked
+ Store questions in state. These should be of the form:
+ Question {
+   BoardState,
+   MateType
+ }

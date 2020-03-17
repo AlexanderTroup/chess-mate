@@ -1,5 +1,5 @@
-import { MARK_CLICKED } from "../types";
+import { NEXT_QUESTION } from "../types";
 
-export const markClickedAction = () => ({
-  type: typeof MARK_CLICKED
+export const nextQuestionAction = () => ({
+  type: NEXT_QUESTION
 })

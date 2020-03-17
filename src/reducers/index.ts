@@ -1,6 +1,10 @@
 import {combineReducers} from 'redux'
-import { markClicked } from './markClicked'
+import { quiz } from './quiz'
 
-export default combineReducers({
- markClicked
+const rootReducer = combineReducers({
+ quiz
 })
+
+export type RootState = ReturnType<typeof rootReducer>
+
+export default rootReducer

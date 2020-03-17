@@ -5,7 +5,6 @@ import _ from "lodash"
 import "./Board.css"
 import { Piece } from "../Piece"
 import { BoardState, Rank, File } from "../../domain/BoardState"
-import { AnastasiasMate } from "../../domain/exampleBoardStates"
 
 export const getPieceForSquare = (board: BoardState, rank: Rank, file: File) => {
  const matchingPieces = board.pieces.filter(piece => piece.rank === rank && piece.file === file)
@@ -13,21 +12,7 @@ export const getPieceForSquare = (board: BoardState, rank: Rank, file: File) => 
  return matchingPieces.length > 0 ? matchingPieces[0].piece : null
 }
 
-const getPieceForCoordinates = (x: number, y: number) => {
-  //not right that board setup is determined here. should be something passed in. 
-  // const pieceColour = (y < 4) ? Colour.WHITE : Colour.BLACK;
-
-  // if (y > 1 && y < 6) {return null}
-  // if (y === 1 || y === 6) {return <Piece colour={pieceColour} pieceType={PieceType.PAWN}/>}
-
-  // const getPieceTypeForFile = (x: number): PieceType => {
-  //   if(x === 0 || x === 7){return PieceType.ROOK}
-  //   if(x === 1 || x === 6){return PieceType.KNIGHT}
-  //   if(x === 2 || x === 5){return PieceType.BISHOP}
-  //   if(x === 3){return PieceType.QUEEN}
-  //   if(x === 4){return PieceType.KING}
-  //   throw new Error(`File number (${x}) does not have an associated piece type.`)
-  // }
+const getPieceForCoordinates = (position: BoardState, x: number, y: number) => {
 
   const intToRank = (x: Number): Rank => {
     if (x === 0 ) return Rank.ONE
@@ -56,18 +41,21 @@ const getPieceForCoordinates = (x: number, y: number) => {
 
   const rank = intToRank(y)
   const file = intToFile(x)
-  const piece = getPieceForSquare(AnastasiasMate, rank, file)
+  const piece = getPieceForSquare(position, rank, file)
 
   return piece === null ? null : <Piece colour={piece.colour} pieceType={piece.type}/>
 } 
- 
 
-const Board: React.FC = () => <div className="board">
+interface Props {
+  position: BoardState
+}
+
+const Board: React.FC<Props> = ({position}) => <div className="board">
   {
     _.range(8).map(y => 
       _.range(8).map(x => 
       <Square type={ (x+y)%2 === 0 ?  SquareColour.LIGHT : SquareColour.DARK }>
-        {getPieceForCoordinates(x, 7 - y)}
+        {getPieceForCoordinates(position, x, 7 - y)}
       </Square>
     )  
     ) 

@@ -1,12 +1,9 @@
-export const MARK_CLICKED = 'MARK_CLICKED'
 
-interface MarkClickedAction {
-  type: typeof MARK_CLICKED
+export const NEXT_QUESTION = 'NEXT_QUESTION'
+
+interface NextQuestionAction {
+  type: typeof NEXT_QUESTION
 }
 
-export interface MarkClickedState {
-  clicked: boolean
-}
-
-// this should be made more granular to involve just markclickedaction.
-export type ActionTypes = MarkClickedAction
+// this should be made more granular
+export type ActionTypes = NextQuestionAction

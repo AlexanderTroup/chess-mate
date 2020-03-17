@@ -2,24 +2,20 @@ import React from 'react';
 import './App.css';
 import Board from './Board/Board'
 import {connect, ConnectedProps} from 'react-redux'
-import { MarkClickedState, MARK_CLICKED } from '../types';
-
-interface RootState {
-  markClicked: MarkClickedState
-}
+import { NEXT_QUESTION } from '../types';
+import { RootState } from '../reducers';
 
 const mapState = (state: RootState) => {
-  console.log('==========STATE==========================');
-  console.log(state);
-  console.log('====================================');
-  
   return {
-    clicked: state.markClicked.clicked
+    question: state.quiz.questions[state.quiz.currentQuestionNumber],
+    questionCount: state.quiz.questions.length,
+    questionNumber: state.quiz.currentQuestionNumber + 1
   }
 }
 
 const mapDispatch = {
-  toggleClicked: () => ({type: MARK_CLICKED})
+  //refactor to take in the action from elsewhere.
+  nextQuestion: () => ({type: NEXT_QUESTION})
 }
 
 const connector = connect(mapState, mapDispatch)
@@ -29,23 +25,15 @@ type PropsFromRedux = ConnectedProps<typeof connector>
 const App: React.FC<PropsFromRedux> = (props) => {
   return (
     <div>
-      <h1>x/x</h1>
+      <h1>{props.questionNumber}/{props.questionCount}</h1>
       <h1>What kind of mate is this?</h1>
-      Clicked: {props.clicked.toString()}
-      <Board/>
+      <Board position={props.question.board}/>
       <ul>
-        <button onClick={props.toggleClicked}>Click ME!</button>
         <li>
-          <button>Anastasia's mate</button>
+  <button>{props.question.mateType}</button>
         </li>
-        <li>
-
-        <button>Boden's mate</button>
-        </li>
-        <li>
-          <button>Morphy's Opera mate
-            </button></li>
       </ul>
+      <button onClick={props.nextQuestion}>Next Question</button>
     </div>
 
   );
