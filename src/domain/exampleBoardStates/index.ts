@@ -1,4 +1,4 @@
-import {Position} from 'chessboardjsx'
+import { Position } from 'chessboardjsx'
 
 
 export const StandardBoardState = {}
@@ -11,5 +11,5 @@ export const AnastasiasMate: Position = {
   e7: 'wN',
   g7: 'bP',
   h7: 'bK',
-  h5: 'wR'
+  h5: 'wR',
 }

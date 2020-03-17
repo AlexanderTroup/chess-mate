@@ -1,4 +1,4 @@
-import { Piece } from "./Piece"
+import { Piece } from './Piece'
 
 export enum Rank {
   ONE = 'First',
@@ -12,7 +12,7 @@ export enum Rank {
 }
 
 export enum File {
-  A,B,C,D,E,F,G,H
+  A, B, C, D, E, F, G, H
 }
 
 

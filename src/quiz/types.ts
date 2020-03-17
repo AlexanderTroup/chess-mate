@@ -1,5 +1,5 @@
-import {Position} from 'chessboardjsx'
-import { MateType } from "../domain/MateType";
+import { Position } from 'chessboardjsx'
+import { MateType } from '../domain/MateType'
 
 interface Question {
   position: Position
@@ -10,4 +10,3 @@ export interface Quiz {
   questions: Question[]
   currentQuestionNumber: number
 }
-

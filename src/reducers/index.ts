@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 import { quiz } from '../quiz/reducers'
 
 const rootReducer = combineReducers({
- quiz
+  quiz,
 })
 
 export type RootState = ReturnType<typeof rootReducer>

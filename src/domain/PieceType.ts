@@ -6,3 +6,5 @@ export enum PieceType {
   QUEEN,
   KING
 }
+
+export default PieceType

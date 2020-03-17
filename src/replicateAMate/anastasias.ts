@@ -1,6 +1,5 @@
-import {Position} from 'chessboardjsx'
+export const isPositionMate = ():boolean => true
 
-export const isPositionMate = (position:Position) :boolean => 
-{
-  return true
+export default {
+  isPositionMate,
 }

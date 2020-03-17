@@ -1,5 +1,9 @@
-import { NEXT_QUESTION } from "../quiz/actions";
+import { NEXT_QUESTION } from '../quiz/actions'
 
-export const nextQuestionAction = () => ({
-  type: NEXT_QUESTION
+const nextQuestionAction = () => ({
+  type: NEXT_QUESTION,
 })
+
+export default {
+  nextQuestionAction,
+}
