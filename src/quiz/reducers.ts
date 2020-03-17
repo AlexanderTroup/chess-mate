@@ -1,7 +1,7 @@
-import { Quiz } from "../types/quiz";
+import { Quiz } from "./types";
 import { AnastasiasMate, PawnOnD5 } from "../domain/exampleBoardStates";
 import { MateType } from "../domain/MateType";
-import { ActionTypes, NEXT_QUESTION } from "../types";
+import { ActionTypes, NEXT_QUESTION } from "./actions";
 
 const initialState: Quiz = {
   questions: [{
