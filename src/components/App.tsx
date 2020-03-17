@@ -1,6 +1,6 @@
 import React from 'react';
+import Chessboard from 'chessboardjsx'
 import './App.css';
-import Board from './Board/Board'
 import {connect, ConnectedProps} from 'react-redux'
 import { NEXT_QUESTION } from '../types';
 import { RootState } from '../reducers';
@@ -27,7 +27,8 @@ const App: React.FC<PropsFromRedux> = (props) => {
     <div>
       <h1>{props.questionNumber}/{props.questionCount}</h1>
       <h1>What kind of mate is this?</h1>
-      <Board position={props.question.board}/>
+      <Chessboard position={props.question.position} draggable={false}
+      />
       <ul>
         <li>
   <button>{props.question.mateType}</button>

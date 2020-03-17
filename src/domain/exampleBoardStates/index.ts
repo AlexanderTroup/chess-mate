@@ -1,41 +1,15 @@
-import { BoardState, Rank, File } from "../BoardState"
-import { Colour } from "../Colour"
-import { PieceType } from "../PieceType"
+import {Position} from 'chessboardjsx'
+
 
 export const StandardBoardState = {}
 
-export const PawnOnD5: BoardState = {
-  pieces: [
-    {file: File.D,
-    rank: Rank.FIVE,
-  piece: {
-    colour: Colour.WHITE,
-    type: PieceType.PAWN
-  }}
-  ]
+export const PawnOnD5: Position = {
+  d5: 'wP',
 }
 
-export const AnastasiasMate: BoardState = {
-  pieces: [
-    {
-    file: File.E,
-    rank: Rank.SEVEN,
-    piece: {colour: Colour.WHITE, type: PieceType.KNIGHT}
-  },
-    {
-    file: File.G,
-    rank: Rank.SEVEN,
-    piece: {colour: Colour.BLACK, type: PieceType.PAWN}
-  },
-    {
-    file: File.H,
-    rank: Rank.SEVEN,
-    piece: {colour: Colour.BLACK, type: PieceType.KING}
-  },
-    {
-    file: File.H,
-    rank: Rank.FIVE,
-    piece: {colour: Colour.WHITE, type: PieceType.ROOK}
-  },
-]
+export const AnastasiasMate: Position = {
+  e7: 'wN',
+  g7: 'bP',
+  h7: 'bK',
+  h5: 'wR'
 }

@@ -5,10 +5,10 @@ import { ActionTypes, NEXT_QUESTION } from "../types";
 
 const initialState: Quiz = {
   questions: [{
-    board: AnastasiasMate,
+    position: AnastasiasMate,
     mateType: MateType.ANASTASIAS_MATE
   },
-{board: PawnOnD5, mateType: MateType.ANASTASIAS_MATE}],
+{position: PawnOnD5, mateType: MateType.ANASTASIAS_MATE}],
 currentQuestionNumber: 0
 }
 

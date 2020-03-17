@@ -1,8 +1,8 @@
-import { BoardState } from "../domain/BoardState";
+import {Position} from 'chessboardjsx'
 import { MateType } from "../domain/MateType";
 
 interface Question {
-  board: BoardState
+  position: Position
   mateType: MateType
 }
 
