@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:jsx-a11y/strict'
   ],
   globals: {
     Atomics: 'readonly',
@@ -22,6 +23,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'jsx-a11y'
   ],
   rules: {
     semi: ["error", "never"],
