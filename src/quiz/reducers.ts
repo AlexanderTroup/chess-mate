@@ -13,7 +13,7 @@ const initialState: Quiz = {
   currentQuestionNumber: 0,
 }
 
-export const quiz = (state = initialState, action: ActionTypes) => {
+export const quiz = (state = initialState, action: ActionTypes):Quiz => {
   switch (action.type) {
     case NEXT_QUESTION:
       return state.currentQuestionNumber + 1 >= state.questions.length
