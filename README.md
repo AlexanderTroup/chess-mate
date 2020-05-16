@@ -42,3 +42,7 @@ This could be a great bit of kit. Chess Players need to be able to recognise Che
 Instead of programming behaviour to switch between quiz, replicate challenge and examples etc I should just use react-router so that it can all be shown in the browser as well!
 
 Small change: Justify Center the board so it doesn't look disasterous on mobile! Maybe start lookig at flexbox?
+
+## Challenges
+
+Dragging seems to be not possible on mobile for the chessboard lib we're using. That suggests that we may need to re-implement the whole thing. It also doesn't pass any of the accessibility checks.

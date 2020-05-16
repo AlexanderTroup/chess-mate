@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .assistive-text {
+        position: absolute;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+    </style>
+    <script type="text/javascript"> window.updateLiveText = (announcement) => {}
+    </script>
+  </head>
+  <body>
+    <span aria-live="assertive" class="assistive-text"></span>
+    <span id="operation" class="assistive-text">
+      Press Spacebar to reorder
+    </span>
+    <ol role="listbox">
+      <li
+        role="option"
+        draggable="true"
+        aria-describedby="operation"
+        tabindex="0"
+      >
+        Ice Cream
+      </li>
+      <li
+        role="option"
+        draggable="true"
+        aria-describedby="operation"
+        tabindex="-1"
+      >
+        Pie
+      </li>
+      <li
+        role="option"
+        draggable="true"
+        aria-describedby="operation"
+        tabindex="-1"
+      >
+        Cake
+      </li>
+      <li
+        role="option"
+        draggable="true"
+        aria-describedby="operation"
+        tabindex="-1"
+      >
+        Cupcake
+      </li>
+    </ol>
+  </body>
+</html>

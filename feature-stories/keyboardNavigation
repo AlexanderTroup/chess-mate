@@ -1,0 +1,17 @@
+User can navigate around the chessboard using the arrow keys, and then select SPACE to pick a piece. then they can click space to drop the piece
+
+Diagram
+(white pieces at the top in a grid)
+(chess board)
+(black pieces at the bottom in a grid)
+
+similar to [https://medium.com/salesforce-ux/4-major-patterns-for-accessible-drag-and-drop-1d43f64ebf09](this).
+
+Could use TAB to tab between squares, or alternatively it could be used to navigate pieces on the board or at the top.
+
+What if a user wants to remove the piece? press R?
+What if the user wants to change the colour of a piece? press B or W to specify?
+
+pwr = place white rook
+pbp = place black pawn
+Imagine if you could navigate around the chessboard entirely on the keyboard?

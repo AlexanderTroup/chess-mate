@@ -5,7 +5,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { VALIDATE_ANSWER, movePiece } from './actions'
 import { RootState } from '../reducers'
 import Button from '../components/Button'
-import { Heading1 } from '../components/Headings'
+import { Heading3 } from '../components/Headings'
 
 const mapState = (state: RootState) => ({
   position: state.replicateAMate.currentPosition,
@@ -27,16 +27,18 @@ const ReplicateMateChallenge: React.FC<PropsFromRedux> = ({
   validateAnswer,
   onDrop,
 }) => (
-  <div>
-    <Heading1 value="What does a Damiano&apos;s mate look like?" />
+  <div style={{ margin: '1rem 1rem' }}>
+    <Heading3 value="What does a Damiano&apos;s mate look like?" />
     <Chessboard
       sparePieces
       position={position}
       onDrop={(details) => onDrop(details)}
       dropOffBoard="snapback"
-      calcWidth={() => 300}
+      calcWidth={(({ screenWidth }) => Math.min(screenWidth - 20, 600))}
     />
-    <Button onClick={validateAnswer} value="Like This?" />
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Button onClick={validateAnswer} value="Like This?" />
+    </div>
     {currentAnswerCorrect && <div>Correct!!!</div>}
   </div>
 )
